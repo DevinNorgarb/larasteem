@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        Test Vue is working
+                        <router-view></router-view>
                     </div>
                 </div>
             </div>
