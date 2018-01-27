@@ -11,10 +11,20 @@ export default {
     Profile
   },
   mounted() {
+    this.getDiscussionsByTrending()
     steem.api.setOptions({ url: 'https://api.steemit.com' })
-    steem.api.getAccounts(['xenetics'], (err, result) => {
-      console.log(JSON.parse((result[0].json_metadata)))
-    })  }
+    // steem.api.getAccounts(['xenetics'], (err, result) => {
+    //   console.log(JSON.parse((result[0].json_metadata)))
+    // })
+  },
+  methods: {
+    getDiscussionsByTrending() {
+      steem.api.getDiscussionsByTrending(query, function(err, result) {
+        console.log(err, result);
+      });
+    }
+  }
+
 }
 </script>
 
