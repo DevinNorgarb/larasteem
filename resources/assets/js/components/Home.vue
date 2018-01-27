@@ -11,8 +11,10 @@ export default {
     Profile
   },
   mounted() {
-    console.log(steem);
-  }
+    steem.api.setOptions({ url: 'https://api.steemit.com' })
+    steem.api.getAccounts(['xenetics'], (err, result) => {
+      console.log(JSON.parse((result[0].json_metadata)))
+    })  }
 }
 </script>
 

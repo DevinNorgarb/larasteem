@@ -29747,7 +29747,7 @@ exports = module.exports = __webpack_require__(45)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -30036,7 +30036,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     Profile: __WEBPACK_IMPORTED_MODULE_1__profile_Profile_vue___default.a
   },
   mounted: function mounted() {
-    console.log(__WEBPACK_IMPORTED_MODULE_0_steem___default.a);
+    __WEBPACK_IMPORTED_MODULE_0_steem___default.a.api.setOptions({ url: 'https://api.steemit.com' });
+    __WEBPACK_IMPORTED_MODULE_0_steem___default.a.api.getAccounts(['xenetics'], function (err, result) {
+      console.log(JSON.parse(result[0].json_metadata));
+    });
   }
 });
 
