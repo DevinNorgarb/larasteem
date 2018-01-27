@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+                        Test Vue is working
                     </div>
                 </div>
             </div>
@@ -16,6 +16,7 @@
 
 <script>
     export default {
+      name: 'app',
         mounted() {
             console.log('Component mounted.')
         }
